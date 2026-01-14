@@ -1,0 +1,96 @@
+# User Accounts
+# This file creates sample users for testing LDAP integration
+# All passwords are: password123 (hashed with SSHA)
+
+# John Doe - Developer
+dn: cn=john.doe,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: john.doe
+sn: Doe
+givenName: John
+displayName: John Doe
+uid: john.doe
+uidNumber: 1001
+gidNumber: 1001
+homeDirectory: /home/john.doe
+loginShell: /bin/bash
+mail: john.doe@example.com
+userPassword: {SSHA}YI/doPQ+kLbDUvewu+6AT1NGrdwmvm5m
+description: Software Developer
+
+# Jane Smith - Admin and Developer
+dn: cn=jane.smith,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: jane.smith
+sn: Smith
+givenName: Jane
+displayName: Jane Smith
+uid: jane.smith
+uidNumber: 1002
+gidNumber: 1002
+homeDirectory: /home/jane.smith
+loginShell: /bin/bash
+mail: jane.smith@example.com
+userPassword: {SSHA}YI/doPQ+kLbDUvewu+6AT1NGrdwmvm5m
+title: Senior Developer
+description: Senior Developer and System Administrator
+
+# Bob Wilson - Read-only User
+dn: cn=bob.wilson,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: bob.wilson
+sn: Wilson
+givenName: Bob
+displayName: Bob Wilson
+uid: bob.wilson
+uidNumber: 1003
+gidNumber: 1003
+homeDirectory: /home/bob.wilson
+loginShell: /bin/bash
+mail: bob.wilson@example.com
+userPassword: {SSHA}YI/doPQ+kLbDUvewu+6AT1NGrdwmvm5m
+description: Guest User with Read-only Access
+
+# Alice Johnson - HR Staff
+dn: cn=alice.hr,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: alice.hr
+sn: Johnson
+givenName: Alice
+displayName: Alice Johnson
+uid: alice.hr
+uidNumber: 1004
+gidNumber: 1004
+homeDirectory: /home/alice.hr
+loginShell: /bin/bash
+mail: alice.hr@example.com
+userPassword: {SSHA}YI/doPQ+kLbDUvewu+6AT1NGrdwmvm5m
+title: HR Manager
+o: Human Resources
+description: HR Department Manager
+
+# Service Account - Web Application
+dn: cn=svc.webapp,ou=services,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: svc.webapp
+sn: Service
+givenName: WebApp
+displayName: Web Application Service
+uid: svc.webapp
+uidNumber: 2001
+gidNumber: 2001
+homeDirectory: /nonexistent
+loginShell: /bin/false
+mail: svc.webapp@example.com
+userPassword: {SSHA}KeIAiUCStFLX8el//m45EMQAzufjPPrD
+description: Service account for web application LDAP binding

@@ -139,7 +139,3 @@ docker exec openldap ldapsearch -x -H ldap://localhost \
 ```bash
 docker-compose down -v
 docker-compose up -d
-```
-# LDAP-Trial
-# LDAP-Trial
-# LDAP-Trial
